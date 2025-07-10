@@ -45,7 +45,7 @@ require("lazy").setup({
         -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
-        "tutor",
+        -- "tutor", -- WHY IS THIS DISABLED BY LAZY??
         "zipPlugin",
       },
     },
