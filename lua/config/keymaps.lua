@@ -4,6 +4,7 @@
 
 vim.keymap.set("n", ",,", "A,<ESC>")
 vim.keymap.set("i", ",,", "<ESC>A,")
+vim.keymap.set("n", "ycc", "yygccp", { remap = true })
 
 -- Great Resources:
 -- * https://www.reddit.com/r/neovim/comments/1k4efz8/share_your_proudest_config_oneliners/
