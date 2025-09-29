@@ -1,18 +1,12 @@
--- require("conform").setup({
---   format_on_save = function(bufnr)
---     local ignore_file_types = { "yml", "scss" } -- Add more here if needed
---
---     if vim.tbl_contains(ignore_file_types, vim.bo[bufnr].filetype) then
---       return
---     end
---     return { timeout_ms = 500, lsp_format = "fallback" }
---   end,
--- })
-
--- Disable autoformat for yaml files
+-- Disable autoformat for yaml & scss files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "yaml" },
+  pattern = { "yaml", "scss" },
   callback = function()
     vim.b.autoformat = false
   end,
 })
+
+return {}
+-- To solve the error:
+-- Invalid spec module: plugins.format`
+-- Expected a `table` of specs, but a `nil` was returned instead
