@@ -1,4 +1,12 @@
 return {
+  -- nightfly: https://github.com/bluz71/vim-nightfly-colors
+  {
+    "bluz71/vim-nightfly-colors",
+    lazy = false,
+    priority = 1000,
+    name = "nightfly",
+  },
+
   -- leeward: https://github.com/edmondburnett/leeward.nvim
   {
     "edmondburnett/leeward.nvim",
