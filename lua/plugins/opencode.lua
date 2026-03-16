@@ -36,13 +36,13 @@ return {
     vim.o.autoread = true -- Required for `opts.events.reload`
 
     -- Recommended/example keymaps
-    vim.keymap.set({ "n", "x" }, "<C-a>", function()
+    vim.keymap.set("n", "<C-a>", function()
       require("opencode").ask("@this: ", { submit = true })
     end, { desc = "Ask opencode…" })
-    vim.keymap.set({ "n", "x" }, "<C-x>", function()
+    vim.keymap.set("n", "<C-y>", function() -- Changed from <C-x> to <C-y> to avoid conflicts
       require("opencode").select()
     end, { desc = "Execute opencode action…" })
-    vim.keymap.set({ "n", "t" }, "<leader>o", function() -- Changed from <C-.> to <leader>o to avoid conflicts
+    vim.keymap.set("n", "<leader>o", function() -- Changed from <C-.> to <leader>o to avoid conflicts
       require("opencode").toggle()
     end, { desc = "Toggle opencode" })
 
